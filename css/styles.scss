@@ -1,0 +1,28 @@
+$max-width: 38rem;
+$bg-color: rgb(153, 193, 206);
+$text-color: white;
+
+html {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial,
+        sans-serif;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1rem;
+
+    height: 100vh;
+    max-width: $max-width;
+    margin: auto;
+
+    background-color: $bg-color;
+    color: $text-color;
+}
+
+.image-between {
+    width: 100px;
+    align-self: center;
+    margin: 2rem;
+}
