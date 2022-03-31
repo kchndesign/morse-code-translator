@@ -2,6 +2,14 @@ html {
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
+h1 {
+  margin: 0.75rem 0;
+}
+
+p {
+  margin: 0.5rem 0;
+}
+
 .wrapper {
   display: flex;
   flex-direction: column;
@@ -13,9 +21,18 @@ html {
   background-color: #99c1ce;
   color: white;
 }
-
-.image-between {
-  width: 100px;
+.wrapper textarea {
+  border: none;
+  border-radius: 15px;
+  padding: 15px;
+  margin: 1.5rem 0;
+}
+.wrapper textarea:focus {
+  outline: 4px solid rgba(153, 193, 206, 0.5);
+  outline-offset: -6px;
+}
+.wrapper .image-between {
+  width: 50px;
   align-self: center;
-  margin: 2rem;
+  margin: 0rem;
 }

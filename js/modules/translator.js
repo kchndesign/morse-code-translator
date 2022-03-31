@@ -7,7 +7,18 @@ export class Translator {
     }
 
     translate(type, text) {
+        if (typeof text !== 'string' || text == '') {
+            this.english = '';
+            this.morse = '';
+            return;
+        }
+
         if (type == 'english') {
+            if (text.match(/[^a-z0-9 ]/gi)) {
+                this.morse = 'Sorry! Only alpha-numeric characters!';
+                return;
+            }
+
             const letterArray = [...text];
 
             this.morse = letterArray
@@ -16,11 +27,17 @@ export class Translator {
                 })
                 .join(' ');
         } else if (type == 'morse') {
+            if (text.match(/[^.\- \/]/gi)) {
+                this.english = 'Sorry! Only dots, dashes, spaces and slashes!';
+                return;
+            }
+
             let morseArray = text.split(' ');
 
             this.english = morseArray
                 .map((morse) => {
-                    return this.mapMorse.get(morse).toLowerCase();
+                    const character = this.mapMorse.get(morse);
+                    return character ? character.toLowerCase() : ' ';
                 })
                 .join('');
         } else {
