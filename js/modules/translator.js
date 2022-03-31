@@ -5,6 +5,7 @@ export class Translator {
         this.mapEnglish = mapEnglish;
         this.mapMorse = mapMorse;
     }
+
     translate(type, text) {
         if (type == 'english') {
             const letterArray = [...text];
@@ -19,7 +20,7 @@ export class Translator {
 
             this.english = morseArray
                 .map((morse) => {
-                    return this.mapMorse.get(morse);
+                    return this.mapMorse.get(morse).toLowerCase();
                 })
                 .join('');
         } else {
