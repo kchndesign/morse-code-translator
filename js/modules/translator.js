@@ -14,12 +14,15 @@ export class Translator {
         }
 
         if (type == 'english') {
-            if (text.match(/[^a-z0-9 ]/gi)) {
-                this.morse = 'Sorry! Only alpha-numeric characters!';
-                return;
-            }
-
             const letterArray = [...text];
+
+            if (
+                !letterArray.every((letter) =>
+                    this.mapEnglish.get(letter.toUpperCase()),
+                )
+            ) {
+                return (this.morse = "Sorry! We don't know that character :(");
+            }
 
             this.morse = letterArray
                 .map((letter) => {
