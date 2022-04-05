@@ -1,4 +1,5 @@
 import { Translator } from './modules/translator.js';
+import { playMorse } from './modules/playMorse.js';
 
 const mapEnglish = new Map([
     ['A', '.-'],
@@ -53,6 +54,7 @@ let translator = new Translator(mapEnglish, mapMorse);
 
 const englishInput = document.querySelector('#english');
 const morseInput = document.querySelector('#morse');
+const button = document.querySelector('button');
 
 englishInput.addEventListener('input', () => {
     translator.translate('english', englishInput.value);
@@ -63,3 +65,9 @@ morseInput.addEventListener('input', () => {
     translator.translate('morse', morseInput.value);
     englishInput.value = translator.english;
 });
+
+const buttonClicked = () => {
+    playMorse(morseInput.value);
+};
+
+button.addEventListener('click', buttonClicked);

@@ -36,3 +36,13 @@ p {
   align-self: center;
   margin: 0rem;
 }
+.wrapper .play-sound {
+  background-color: white;
+  padding: 0.75rem;
+  border-radius: 15px;
+  border: none;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  color: #99c1ce;
+}
