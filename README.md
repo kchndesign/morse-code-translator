@@ -70,3 +70,7 @@ chain.finally(() => {
 ```
 
 This works by replacing the `chain` variable with its own `.then()` promise. `chain` might be better named as `previousPromise`. This is counter-intuitive to me because it's hard to imagine there are promises still pending in memory when they aren't stored in an array or something visible to the programmer.
+
+## Project Reflection
+
+Overall the project meets the requirements. I was definitely more confident with Jest this time around and saved a lot of time when doing testing. This was an enjoyable project to make since the brief was relatively straightforward.
