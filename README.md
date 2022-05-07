@@ -1,5 +1,7 @@
 # Morse Code Translator Project
 
+[Find this project hosted here](https://kchn.com.au/morse-code-translator)
+
 ![Image of the project](./README-images/screenshot.png)
 
 This is a simple web application in native JavaScript that allows the user to
