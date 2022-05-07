@@ -1,6 +1,6 @@
 # Morse Code Translator Project
 
-[Find this project hosted here](https://kchn.com.au/morse-code-translator)
+## [Find this project hosted here](https://kchn.com.au/morse-code-translator)
 
 ![Image of the project](./README-images/screenshot.png)
 
